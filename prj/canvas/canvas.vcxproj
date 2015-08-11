@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\canvas\box.h" />
+    <ClInclude Include="..\..\src\canvas\canvas-attach.h" />
+    <ClInclude Include="..\..\src\canvas\canvas-detach.h" />
+    <ClInclude Include="..\..\src\canvas\canvas-detail-handler.h" />
+    <ClInclude Include="..\..\src\canvas\canvas-main.h" />
+    <ClInclude Include="..\..\src\canvas\canvas-manip-handler.h" />
+    <ClInclude Include="..\..\src\canvas\canvas-mode-handler.h" />
+    <ClInclude Include="..\..\src\canvas\canvas-navig-handler.h" />
+    <ClInclude Include="..\..\src\canvas\canvas-zoom-handler.h" />
+    <ClInclude Include="..\..\src\canvas\canvas.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\canvas\box.cpp" />
+    <ClCompile Include="..\..\src\canvas\canvas-attach.cpp" />
+    <ClCompile Include="..\..\src\canvas\canvas-detach.cpp" />
+    <ClCompile Include="..\..\src\canvas\canvas-detail-handler.cpp" />
+    <ClCompile Include="..\..\src\canvas\canvas-main.cpp" />
+    <ClCompile Include="..\..\src\canvas\canvas-manip-handler.cpp" />
+    <ClCompile Include="..\..\src\canvas\canvas-mode-handler.cpp" />
+    <ClCompile Include="..\..\src\canvas\canvas-navig-handler.cpp" />
+    <ClCompile Include="..\..\src\canvas\canvas-zoom-handler.cpp" />
+    <ClCompile Include="..\..\src\canvas\canvas.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3B1762DE-2C5B-4948-A6BF-A33C5BF29309}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libvis</RootNamespace>
+    <ProjectName>canvas</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\bin\$(ProjectName)\</OutDir>
+    <IntDir>..\..\obj\$(ProjectName)\vc10_d\</IntDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\bin\$(ProjectName)\</OutDir>
+    <IntDir>..\..\obj\$(ProjectName)\vc10\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_DEPRECATE;GLEW_STATIC;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\teclibs\iup\include;..\..\teclibs\vis\include;..\..\teclibs\vis\ext\include;..\..\teclibs\vis\ext\include\glew;..\..\teclibs\vis\ext\include\glut;..\..\teclibs\glutil\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalOptions>/Zm400 /MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\teclibs\im\lib\vc9;..\teclibs\iup\lib\vc9;..\teclibs\vis\lib\vc10d;..\teclibs\vis\ext\lib\vc10d;..\teclibs\glutil\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>comctl32.lib;vgllib.lib;vglpath.lib;path.lib;iup.lib;iupgl.lib;iupcontrols.lib;opengl32.lib;glew32.lib;im.lib;glu32.lib;im_avi.lib;vfw32.lib;vgl.lib;vgliup.lib;utl.lib;alg.lib;ugl.lib;uglim.lib;uglimavi.lib;vglim.lib;GlAux.lib;ufont.lib;uso.lib;gdi32.lib;user32.lib;comdlg32.lib;vglpbuffer.lib;utliup.lib;uglrpbuffer.lib;im_wmv.lib;wmvcore.lib;vgllibiup.lib;ftgl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <AdditionalOptions>/NODEFAULTLIB:LIBCMT %(AdditionalOptions)</AdditionalOptions>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>iup.lib;iupgl.lib;vgl.lib;vgllib.lib;vgllibiup.lib;vgliup.lib;alg.lib;utl.lib;ugl.lib;ftgl.lib;ufont.lib;uso.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>..\..\teclibs\iup\lib\vc10;..\..\teclibs\vis\ext\lib\vc10d;..\..\teclibs\vis\lib\vc10d;..\..\teclibs\glutil\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <Lib>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Lib>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\teclibs\iup\include;..\..\teclibs\vis\include;..\..\teclibs\vis\ext\include;..\..\teclibs\vis\ext\include\glew;..\..\teclibs\vis\ext\include\glut;..\..\teclibs\glutil\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalOptions>/Zm400 /MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\teclibs\im\lib\vc9;..\teclibs\iup\lib\vc9;..\teclibs\cd\lib\vc10;..\teclibs\vis\lib\vc10;..\teclibs\vis\ext\lib\vc10;..\teclibs\glutil\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>comctl32.lib;vgllib.lib;iup.lib;iupgl.lib;iupcontrols.lib;opengl32.lib;iupcd.lib;cd.lib;freetype6.lib;im.lib;glu32.lib;vglim.lib;im_avi.lib;vfw32.lib;vgl.lib;vgliup.lib;utl.lib;alg.lib;GlAux.lib;ugl.lib;uglim.lib;uglimavi.lib;ufont.lib;uso.lib;glew32.lib;vglpbuffer.lib;utliup.lib;ftgl.lib;uglrpbuffer.lib;im_wmv.lib;wmvcore.lib;vgllibiup.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>iup.lib;iupgl.lib;vgl.lib;vgliup.lib;vgllib.lib;vgllibiup.lib;alg.lib;utl.lib;ugl.lib;ftgl.lib;ufont.lib;uso.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>..\..\teclibs\iup\lib\vc10;..\..\teclibs\vis\lib\vc10;..\..\teclibs\vis\ext\lib\vc10;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <Lib>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Lib>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

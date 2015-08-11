@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\bmp.cpp" />
+    <ClCompile Include="..\src\fps.cpp" />
+    <ClCompile Include="..\src\gauge.cpp" />
+    <ClCompile Include="..\src\main-dialog.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\model.cpp" />
+    <ClCompile Include="..\src\obj-dialog.cpp" />
+    <ClCompile Include="..\src\object-quad.cpp" />
+    <ClCompile Include="..\src\object.cpp" />
+    <ClCompile Include="..\src\render_functions.cpp" />
+    <ClCompile Include="..\src\rply.c" />
+    <ClCompile Include="..\src\texture.cpp" />
+    <ClCompile Include="..\src\util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\anfvar.h" />
+    <ClInclude Include="..\src\bmp.h" />
+    <ClInclude Include="..\src\fps.h" />
+    <ClInclude Include="..\src\gauge.h" />
+    <ClInclude Include="..\src\main-dialog.h" />
+    <ClInclude Include="..\src\model.h" />
+    <ClInclude Include="..\src\obj-dialog.h" />
+    <ClInclude Include="..\src\object-father.h" />
+    <ClInclude Include="..\src\object-quad.h" />
+    <ClInclude Include="..\src\object.h" />
+    <ClInclude Include="..\src\rply.h" />
+    <ClInclude Include="..\src\teapot.h" />
+    <ClInclude Include="..\src\texture.h" />
+    <ClInclude Include="..\src\util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\models\fragment.frag" />
+    <None Include="..\models\vertex.vert" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8AFDE47B-621D-40B6-98F2-2AA01BD9388C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>main</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\</OutDir>
+    <IntDir>..\obj\vc10_d\</IntDir>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\</OutDir>
+    <IntDir>..\obj\vc10\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;GLEW_STATIC;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\teclibs\glm;..\teclibs\gli;..\teclibs\cd\include;..\teclibs\im\include;..\teclibs\iup\include;..\teclibs\vrbase\include;..\teclibs\vis\include;..\teclibs\vis\ext\include\glut;..\teclibs\vis\ext\include\glew;..\teclibs\glutil\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalOptions>/Zm400 /MP %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\teclibs\cd\lib\vc10;..\teclibs\im\lib\vc10;..\teclibs\iup\lib\vc10;..\teclibs\vis\lib\vc10d;..\teclibs\vis\ext\lib\vc10d;..\teclibs\glutil\lib;..\bin\render;..\bin\canvas;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>comctl32.lib;glew32.lib;im.lib;zlib1.lib;iup.lib;iupcontrols.lib;iupcd.lib;iupimglib.lib;cd.lib;freetype6.lib;ufont.lib;canvas_d.lib;render_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <AdditionalOptions>/NODEFAULTLIB:LIBCMT %(AdditionalOptions)</AdditionalOptions>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\teclibs\glm;..\teclibs\gli;..\teclibs\cd\include;..\teclibs\im\include;..\teclibs\iup\include;..\teclibs\vis\include;..\teclibs\vis\ext\include\glut;..\teclibs\vis\ext\include\glew;..\teclibs\vrbase\include;..\teclibs\glutil\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalOptions>/Zm400 /MP %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\teclibs\cd\lib\vc10;..\teclibs\im\lib\vc10;..\teclibs\iup\lib\vc10;..\teclibs\vis\lib\vc10;..\teclibs\vis\ext\lib\vc10;..\teclibs\glutil\lib;..\bin\render;..\bin\canvas;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>comctl32.lib;glew32.lib;iup.lib;cd.lib;iupcd.lib;iupcontrols.lib;iupimglib.lib;freetype6.lib;zlib1.lib;render.lib;canvas.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "render", "render\render.vcxproj", "{A2227B97-C15C-465C-8112-24B2DEE7592E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "canvas", "canvas\canvas.vcxproj", "{3B1762DE-2C5B-4948-A6BF-A33C5BF29309}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "main", "main.vcxproj", "{8AFDE47B-621D-40B6-98F2-2AA01BD9388C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A2227B97-C15C-465C-8112-24B2DEE7592E} = {A2227B97-C15C-465C-8112-24B2DEE7592E}
+		{3B1762DE-2C5B-4948-A6BF-A33C5BF29309} = {3B1762DE-2C5B-4948-A6BF-A33C5BF29309}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2227B97-C15C-465C-8112-24B2DEE7592E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A2227B97-C15C-465C-8112-24B2DEE7592E}.Debug|Win32.Build.0 = Debug|Win32
+		{A2227B97-C15C-465C-8112-24B2DEE7592E}.Release|Win32.ActiveCfg = Release|Win32
+		{A2227B97-C15C-465C-8112-24B2DEE7592E}.Release|Win32.Build.0 = Release|Win32
+		{3B1762DE-2C5B-4948-A6BF-A33C5BF29309}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3B1762DE-2C5B-4948-A6BF-A33C5BF29309}.Debug|Win32.Build.0 = Debug|Win32
+		{3B1762DE-2C5B-4948-A6BF-A33C5BF29309}.Release|Win32.ActiveCfg = Release|Win32
+		{3B1762DE-2C5B-4948-A6BF-A33C5BF29309}.Release|Win32.Build.0 = Release|Win32
+		{8AFDE47B-621D-40B6-98F2-2AA01BD9388C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8AFDE47B-621D-40B6-98F2-2AA01BD9388C}.Debug|Win32.Build.0 = Debug|Win32
+		{8AFDE47B-621D-40B6-98F2-2AA01BD9388C}.Release|Win32.ActiveCfg = Release|Win32
+		{8AFDE47B-621D-40B6-98F2-2AA01BD9388C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
