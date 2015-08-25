@@ -14,7 +14,7 @@ Estudo de renderização de malhas utilizando uma API mais nova do OpenGL e Shad
 
 Projetos:
 
-<img src="http://github.com/lfmachado/render_mesh/blob/master/main.png" width="400px"/>
+<img src="https://github.com/lfmachado/render_mesh/blob/master/main.png" width="400px"/>
 
 <h3>Main:</h3>
 Utilizando a biblioteca IUP foi implementado o diálogo (windows) para a visualização de modelos PLY (Polygon File Format).
