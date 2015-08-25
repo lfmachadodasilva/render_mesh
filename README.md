@@ -12,6 +12,7 @@
 <li><a href="http://www.tecgraf.puc-rio.br/im/">IM</a> (Image Representation, Storage, Capture and Processing)</li>
 <li>VIS (internal library of <a href="http://www.tecgraf.puc-rio.br/">Tecgraf</a>)</li>
 <li>OpenGL (version 3.3)</li>
+<li><a href="http://glew.sourceforge.net/">GLEW</a> </li>
 <li><a href="http://glm.g-truc.net/">GLM</a> (OpenGL Mathematics)</li>
 <li>Shader (version 3.3)</li>
 </ul>
