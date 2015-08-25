@@ -21,15 +21,15 @@ Utilizando a biblioteca IUP foi implementado o diálogo (windows) para a visuali
 
 <h3>Canvas: </h3>
 
-<img src="http://github.com/lfmachado/render_mesh/blob/master/canvas.png" width="400px"/>
+<img src="https://github.com/lfmachado/render_mesh/blob/master/canvas.png" width="400px"/>
 
 Em conjunto com VIS e IUP, foi implementada uma biblioteca que gerencia toda a parte de manipulação e navegação pelo canvas. Com essa biblioteca é possivel também criar canvas atrelados ao principal, zoom e outras funcionalidades.
 
 <h3>Render: </h3>
 
-<img src="http://github.com/lfmachado/render_mesh/blob/master/MainRender.png" width="400px"/>
+<img src="https://github.com/lfmachado/render_mesh/blob/master/MainRender.png" width="400px"/>
 
-<img src="http://github.com/lfmachado/render_mesh/blob/master/render.png" width="400px"/>
+<img src="https://github.com/lfmachado/render_mesh/blob/master/render.png" width="400px"/>
 
 Essa biblioteca, sem duvida, é mais complexa. Ela é responsável por receber todas as informações do modelo e desenhar no canvas da melhor forma possivel. Foram criadas várias classes para controlar o desenho de cada tipo de primitiva diferente como: linhas, pontos, triângulos , triângulos com textura. Além disso foi criada a classe que recebe todos os tipos de classe de desenho para definir um objeto que tenha vários tipos de primitivas diferentes. 
 Outro segmento dessa biblioteca é a parte de seleção. Utilizando tecnologias de frustum culling e tracado de raio foi possivel fazer uma seleção rápida e precisa, identificando qual o objeto e qual primitiva está sendo selecionada.
