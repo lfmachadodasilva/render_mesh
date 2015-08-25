@@ -3,13 +3,13 @@
 Estudo de renderização de malhas utilizando uma API mais nova do OpenGL e Shader. Para esse projeto foram utilizadas as tecnologias:
 <ul>
 <li>Visual Studio (vc10)</li>
-<li>IUP (Portable User Interface) </li>
-<li>CD (Canvas Draw)</li>
-<li>IM (Image Representation, Storage, Capture and Processing)</li>
+<li><a href="http://webserver2.tecgraf.puc-rio.br/iup/">IUP</a> (Portable User Interface) </li>
+<li><a href="http://webserver2.tecgraf.puc-rio.br/cd/">CD</a> (Canvas Draw)</li>
+<li><a href="http://webserver2.tecgraf.puc-rio.br/im/">IM</a> (Image Representation, Storage, Capture and Processing)</li>
 <li>VIS (biblioteca interna do instituto tecgraf)</li>
-<li>OpenGL (versão 3.3)</li>
-<li>OpenGL Mathematics (glm)</li>
-<li>Shader (versão 3.3)</li>
+<li>OpenGL (version 3.3)</li>
+<li><a href="http://glm.g-truc.net/">GLM</a> (OpenGL Mathematics)</li>
+<li>Shader (version 3.3)</li>
 </ul>
 
 Projetos:
