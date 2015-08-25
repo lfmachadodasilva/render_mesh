@@ -1,4 +1,0 @@
-#ifndef UTL_IM_AVI_DEFINES_H_OLD
-#define UTL_IM_AVI_DEFINES_H_OLD
-
-#endif
