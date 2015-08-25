@@ -12,6 +12,8 @@ Mesh rendering study using a newer API OpenGL and Shader. For this project were 
 <li>Shader (version 3.3)</li>
 </ul>
 
+<img src="https://github.com/lfmachado/render_mesh/blob/master/image.jpg" width="400px"/>
+
 Project:
 
 <img src="https://github.com/lfmachado/render_mesh/blob/master/main.png" width="400px"/>
