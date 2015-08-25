@@ -34,9 +34,16 @@
 The structure was build to control the render of each type of primitive as: lines, points, triangles and triangles with texture. Another part of this project/library is the selection. 
 Using frustum culling and ray tracing algorithm was possible to develop fast and precise selection.</p>
 
-<p align="center"><img src="MainRender.png" width="400px"/></p>
-
-<p align="center"><img src="render.png" width="400px"/></p>
+<table>
+	<tr>
+		<td>
+			<p align="center"><img src="MainRender.png" width="400px"/></p>
+		</td>
+		<td>
+			<p align="center"><img src="render.png" width="400px"/></p>
+		</td>
+	</tr>
+</table>
 
 <h3>Future work</h3>
 Incorporate those libraries in <a href="http://www.tecgraf.puc-rio.br/sw-anflex.html">Anflex</a> project (already incorporated).
