@@ -38,7 +38,7 @@ Using frustum culling and ray tracing algorithm was possible to develop fast and
 <table>
 	<tr>
 		<td>
-			<p align="center"><img src="MainRender.png" width="400px"/></p>
+			<p align="center"><img src="main_render.png" width="400px"/></p>
 		</td>
 		<td>
 			<p align="center"><img src="render.png" width="400px"/></p>
